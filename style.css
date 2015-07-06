@@ -1,8 +1,103 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
+  font-family: 'PT Sans Narrow', sans-serif;
+  letter-spacing: 1px;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+strong {
+    font-weight: 600;
+}
+
+.full-text {
+    text-align: center;
+    font-size: 2rem;
+    padding: 1.2rem;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+nav {
+    background: #f7f7f8;
+    position: relative;
+    height: 4rem;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 1.6rem;
+    height: 4rem;
+    line-height: 4rem;
+    padding: 0 2rem;
+}
+
+nav .center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+nav .left {
+    float: left;
+}
+
+nav .right {
+    float: right;
+}
+
+[class$=up] {
+    /* Centering Grid */
+    width: 100%;
+    max-width: 1140px;
+    margin: auto;
+    overflow: auto;
+    padding: 1rem;
+}
+
+[class$=up] > * {
+    padding: 1rem;
+    float: left;
+}
+
+.one-up > * {
+    width: 100%;
+}
+
+.two-up > * {
+    width: 50%;
+}
+
+.three-up > * {
+    width: 33%;
+}
+
+.four-up > * {
+    width: 25%;
+}
+
+/* Block Quotes and Text */
+
+blockquote {
+    color: #888;
+    max-width: 800px;
+    margin: auto;
+    font-style: italic;
+}
+
+blockquote:before, blockquote:after {
+    content: "\"";
+}
+
+.card {
+    transition: box-shadow 500ms ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0 5px 0 #888;
+}
